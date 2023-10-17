@@ -1,0 +1,111 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+//IhO6aJ6tX5naI4g5
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PetOwnerUser {
+  petowner_id            String      @id @default(uuid())
+  username               String
+  image_profile          String?
+  email                  String      @unique
+  password               String
+  phone                  String
+  id_card_number         String?
+  date_of_birth          DateTime?
+  email_verification     Boolean     @default(false)
+  emailVerificationToken String?
+  createAt               DateTime    @default(now())
+  updateAt               DateTime    @updatedAt
+  pets                   PetDetail[]
+  Bookings               Booking[]
+}
+
+model PetDetail {
+  pet_id        String       @id @default(uuid())
+  petname       String
+  image_profile String
+  pettype       String
+  breed         String
+  sex           String
+  age           String
+  color         String
+  weight        String
+  about         String
+  status_pet    Boolean      @default(false)
+  createAt      DateTime     @default(now())
+  updateAt      DateTime     @updatedAt
+  owner         PetOwnerUser @relation(fields: [owner_id], references: [petowner_id])
+  owner_id      String
+}
+
+model PetSitterUser {
+  petsitter_id           String            @id @default(uuid())
+  image_profile          String?
+  username               String?
+  email                  String            @unique
+  password               String
+  phone                  String
+  id_card_number         String?
+  introduction           String?
+  email_verification     Boolean           @default(false)
+  emailVerificationToken String?
+  petsitterdetail        PetSitterDetail[]
+  addresses              Address[]
+  bookings               Booking[]
+  status_update          Boolean           @default(false)
+}
+
+model PetSitterDetail {
+  petsitterdetail_id String        @id @default(uuid())
+  petsitter          PetSitterUser @relation(fields: [petsitter_id], references: [petsitter_id])
+  petsitter_id       String
+  pet_sitter_name    String?
+  pet_type           String[]
+  services           String?
+  my_place           String?
+  image_gallery      String[]
+  experience         String?
+  createAt           DateTime      @default(now())
+  updateAt           DateTime      @updatedAt
+}
+
+model Address {
+  address_id     String        @id @default(uuid())
+  petsitter      PetSitterUser @relation(fields: [petsitter_id], references: [petsitter_id])
+  petsitter_id   String
+  address_detail String?
+  district       String?
+  sub_district   String?
+  province       String?
+  post_code      String?
+  createAt       DateTime      @default(now())
+  updateAt       DateTime      @updatedAt
+}
+
+model Booking {
+  booking_id         String        @id @default(uuid())
+  transaction_date   DateTime      @default(now())
+  transaction_no     Int           @default(autoincrement())
+  datetime           DateTime
+  startTime          DateTime
+  endTime            DateTime
+  additional_message String?
+  total_price        Int
+  createAt           DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+  petdetails         String[]
+  petsitter          PetSitterUser @relation(fields: [petsitter_id], references: [petsitter_id])
+  petowner           PetOwnerUser  @relation(fields: [petowner_id], references: [petowner_id])
+  petsitter_id       String
+  petowner_id        String
+  status_booking     String
+}

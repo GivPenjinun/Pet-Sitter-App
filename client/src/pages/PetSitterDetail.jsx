@@ -3,8 +3,7 @@ import LocationIcon from "../assets/icons/icon_location.svg";
 import HeaderAuth from "../components/HeaderAuth";
 import AdvancedCarousel from "../components/Carousel";
 import useFilter from "../hooks/useFilter";
-import icon_arrow1 from "../assets/icons/iconarrow1.svg";
-import icon_arrow2 from "../assets/icons/iconarrow2.svg";
+
 import calendarIcon from "../assets/icons/icon=calender.svg";
 import clockIcon from "../assets/icons/icon=clock.svg";
 import {
@@ -48,13 +47,13 @@ function PetSitterDetail() {
     setLoading,
     open,
     setOpen,
-    bookingDetails,
+
     setBookingDetails,
     selectedPetsitterID,
     setSelectedPetsitterID,
-    selectedPetsitterName,
+
     setSelectedPetsitterName,
-    selectedPetsitterUser,
+
     setSelectedPetsitterUser,
   } = useContext(ToggleContext);
 
@@ -145,7 +144,7 @@ function PetSitterDetail() {
       return time1WithoutAMPM.localeCompare(time2WithoutAMPM);
     }
   };
-  //แก้ด้วยfetch 2 รอบ
+  //แก้fetch 2 รอบ
   useEffect(() => {
     const fetchData = async () => {
       try {

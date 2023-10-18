@@ -23,12 +23,12 @@ import BookingList from "./BookingList";
 import BookingListDetail from "./BookingListDetail";
 
 export const ToggleContext = React.createContext();
-const today = dayjs();
+
 const tomorrow = dayjs().add(1, "day");
 const AuthenticatedApp = () => {
   const token = localStorage.getItem("token");
   const userDataFromToken = jwtDecode(token);
-  const currentDate = dayjs();
+
   const [toggleCreatePet, setToggleCreatePet] = useState(false);
   const [toggleDeletePet, setToggleDeletePet] = useState(false);
   const [OpenPetModal, setOpenPetModal] = useState(false);

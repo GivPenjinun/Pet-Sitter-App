@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import useFilter from "../hooks/useFilter.js";
 import PetSitterCard from "../components/PetSitterCard.jsx";
-import Pagination from "@mui/material/Pagination";
+
 import HeaderAuth from "../components/HeaderAuth";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
@@ -26,7 +26,7 @@ function PetSitterList() {
   const [selectedAnimals, setSelectedAnimals] = useState([]);
   const {
     petSitterLists,
-    totalPages,
+
     getPetSitterLists,
     getPetSitterById,
     isError,

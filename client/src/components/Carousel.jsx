@@ -28,7 +28,7 @@ const AdvancedCarousel = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:6543/petsitteruser/${petsitter_id}`,
+          `https://pet-sitter-app-server.vercel.app/petsitteruser/${petsitter_id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -151,7 +151,7 @@ function PetSitterDetail() {
         // Replace 'YOUR_ACCESS_TOKEN' with your actual access token or API key
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:6543/petsitteruser/${petsitter_id}`,
+          `https://pet-sitter-app-server.vercel.app/petsitteruser/${petsitter_id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -41,7 +41,7 @@ const fetchUserData = () => {
       setIsError(false);
       setIsLoading(true);
       const result = await axios.get(
-        `http://localhost:6543/petOwnerUser/${petOwnerID}`,
+        `https://pet-sitter-app-server.vercel.app/petOwnerUser/${petOwnerID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ const fetchUserData = () => {
 
       setIsLoading(true);
       await axios.put(
-        `http://localhost:6543/petOwnerUser/${petOwnerID}`,
+        `https://pet-sitter-app-server.vercel.app/petOwnerUser/${petOwnerID}`,
         data,
         {
           headers: {
@@ -87,7 +87,7 @@ const fetchUserData = () => {
       setIsError(false);
       setIsLoading(true);
       await axios.post(
-        `http://localhost:6543/petOwnerUser/petdetail/${petOwnerID}`,
+        `https://pet-sitter-app-server.vercel.app/petOwnerUser/petdetail/${petOwnerID}`,
         data,
         {
           headers: {
@@ -112,7 +112,7 @@ const fetchUserData = () => {
       setIsError(false);
 
       const result = await axios.get(
-        `http://localhost:6543/petOwnerUser/petdetail/${petOwnerID}`,
+        `https://pet-sitter-app-server.vercel.app/petOwnerUser/petdetail/${petOwnerID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -136,7 +136,7 @@ const fetchUserData = () => {
       setIsError(false);
 
       const result = await axios.get(
-        `http://localhost:6543/petowneruser/petdetail/${petOwnerID}/pet/${petID}`,
+        `https://pet-sitter-app-server.vercel.app/petowneruser/petdetail/${petOwnerID}/pet/${petID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -158,7 +158,7 @@ const fetchUserData = () => {
 
       setIsLoading(true);
       await axios.put(
-        `http://localhost:6543/petowneruser/petdetail/${petOwnerID}/pet/${petID}`,
+        `https://pet-sitter-app-server.vercel.app/petowneruser/petdetail/${petOwnerID}/pet/${petID}`,
         data,
         {
           headers: {
@@ -179,7 +179,7 @@ const fetchUserData = () => {
 
       setIsLoading(true);
       await axios.delete(
-        `http://localhost:6543/petowneruser/petdetail/${petOwnerID}/pet/${petID}`,
+        `https://pet-sitter-app-server.vercel.app/petowneruser/petdetail/${petOwnerID}/pet/${petID}`,
 
         {
           headers: {
@@ -208,7 +208,7 @@ const fetchUserData = () => {
       setIsError(false);
       setIsLoading(true);
       const result = await axios.get(
-        `http://localhost:6543/booking/petowner/${petOwnerID}`,
+        `https://pet-sitter-app-server.vercel.app/booking/petowner/${petOwnerID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -232,7 +232,7 @@ const fetchUserData = () => {
       setIsError(false);
       setIsLoading(true);
       const result = await axios.get(
-        `http://localhost:6543/booking/petowner/${petOwnerID}/${bookingID}`,
+        `https://pet-sitter-app-server.vercel.app/booking/petowner/${petOwnerID}/${bookingID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -255,11 +255,15 @@ const fetchUserData = () => {
 
       setIsError(false);
       setIsLoading(true);
-      await axios.post(`http://localhost:6543/booking/${petOwnerID}`, data, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.post(
+        `https://pet-sitter-app-server.vercel.app/booking/${petOwnerID}`,
+        data,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       setIsLoading(false);
     } catch (error) {
@@ -273,7 +277,7 @@ const fetchUserData = () => {
       const token = localStorage.getItem("token");
 
       const result = await axios.get(
-        `http://localhost:6543/petSitterUser/${petSitterID}`,
+        `https://pet-sitter-app-server.vercel.app/petSitterUser/${petSitterID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -293,7 +297,7 @@ const fetchUserData = () => {
       const token = localStorage.getItem("token");
 
       const result = await axios.get(
-        `http://localhost:6543/booking/petsitter/${petSitterID}`,
+        `https://pet-sitter-app-server.vercel.app/booking/petsitter/${petSitterID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -315,7 +319,7 @@ const fetchUserData = () => {
 
       setIsLoading(true);
       await axios.put(
-        `http://localhost:6543/petSitterUser/${petSitterID}`,
+        `https://pet-sitter-app-server.vercel.app/petSitterUser/${petSitterID}`,
         data,
         {
           headers: {
@@ -336,7 +340,7 @@ const fetchUserData = () => {
       const token = localStorage.getItem("token");
 
       const result = await axios.get(
-        `http://localhost:6543/booking/petowner/${params.petownerId}/${params.bookingId}`,
+        `https://pet-sitter-app-server.vercel.app/booking/petowner/${params.petownerId}/${params.bookingId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -359,7 +363,7 @@ const fetchUserData = () => {
       };
       setIsLoading(true);
       await axios.put(
-        `http://localhost:6543/booking/petsitter/${petSitterID}/confirm`,
+        `https://pet-sitter-app-server.vercel.app/booking/petsitter/${petSitterID}/confirm`,
         data,
         {
           headers: {
@@ -383,7 +387,7 @@ const fetchUserData = () => {
       };
       setIsLoading(true);
       await axios.put(
-        `http://localhost:6543/booking/petsitter/${petSitterID}/cancel`,
+        `https://pet-sitter-app-server.vercel.app/booking/petsitter/${petSitterID}/cancel`,
         data,
         {
           headers: {
@@ -407,7 +411,7 @@ const fetchUserData = () => {
       };
       setIsLoading(true);
       await axios.put(
-        `http://localhost:6543/booking/petsitter/${petSitterID}/in-service`,
+        `https://pet-sitter-app-server.vercel.app/booking/petsitter/${petSitterID}/in-service`,
         data,
         {
           headers: {
@@ -430,7 +434,7 @@ const fetchUserData = () => {
       };
       setIsLoading(true);
       await axios.put(
-        `http://localhost:6543/booking/petsitter/${petSitterID}/end-service`,
+        `https://pet-sitter-app-server.vercel.app/booking/petsitter/${petSitterID}/end-service`,
         data,
         {
           headers: {

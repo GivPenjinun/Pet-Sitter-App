@@ -47,7 +47,7 @@ const BillBooking = () => {
 
   const fetchBooking = async () => {
     const res = await axios.get(
-      `http://localhost:6543/booking/petowner/${petOwnerID}`
+      `https://pet-sitter-app-server.vercel.app/booking/petowner/${petOwnerID}`
     );
 
     const bookings = res.data.bookings;
@@ -67,7 +67,7 @@ const BillBooking = () => {
 
   const fetchBookingId = async (lastBookingId) => {
     const resBookingId = await axios.get(
-      `http://localhost:6543/booking/petowner/${petOwnerID}/${lastBookingId.booking_id}`
+      `https://pet-sitter-app-server.vercel.app/booking/petowner/${petOwnerID}/${lastBookingId.booking_id}`
     );
 
     setBillData(resBookingId.data.booking);

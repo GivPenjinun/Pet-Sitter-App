@@ -15,7 +15,7 @@ const UploadComponent = () => {
         }
 
         const response = await axios.put(
-          `http://localhost:6543/petsitteruser/${petsitter_id}`,
+          `https://pet-sitter-app-server.vercel.app/petsitteruser/${petsitter_id}`,
           data,
           {
             headers: { "Content-Type": "multipart/form-data" },

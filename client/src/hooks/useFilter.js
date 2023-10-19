@@ -19,7 +19,7 @@ const useFilter = () => {
       setIsError(false);
       setIsLoading(true);
       const results = await axios.get(
-        `http://localhost:6543/petSitterUser/petsitterdetail/alldetail?${params.toString()}` //edit
+        `https://pet-sitter-app-server.vercel.app/petSitterUser/petsitterdetail/alldetail?${params.toString()}` //edit
       );
 
       setPetSitterLists(results.data); //edit
@@ -38,7 +38,7 @@ const useFilter = () => {
       setIsError(false);
       setIsLoading(true);
       const result = await axios.get(
-        `http://localhost:6543/petsitteruser/petsitterdetail/${petSitterId}`
+        `https://pet-sitter-app-server.vercel.app/petsitteruser/petsitterdetail/${petSitterId}`
       );
 
       setPetSitter(result.data);

@@ -62,7 +62,7 @@ petOwnerUser.post("/register", async (req, res) => {
     });
 
     // Send an email with the verification link
-    const verificationLink = `http://localhost:6543/petowneruser/verify?token=${verificationToken}`;
+    const verificationLink = `https://pet-sitter-app-server.vercel.app/petowneruser/verify?token=${verificationToken}`;
 
     res.status(200).json({
       message:

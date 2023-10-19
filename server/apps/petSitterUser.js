@@ -60,7 +60,7 @@ petSitterUser.post("/register", async (req, res) => {
     });
 
     // Send an email with the verification link
-    const verificationLink = `http://localhost:6543/petSitterUser/verify?token=${verificationToken}`;
+    const verificationLink = `https://pet-sitter-app-server.vercel.app/petSitterUser/verify?token=${verificationToken}`;
 
     // Send verification email (uncomment and implement according to your email sending mechanism)
     // await sendVerificationEmail(email, verificationLink);

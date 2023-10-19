@@ -59,7 +59,7 @@ function PetSitterProfile() {
           const petSitterID = decodedToken.petsitterId;
 
           const result = await axios.get(
-            `http://localhost:6543/petSitterUser/${petSitterID}`,
+            `https://pet-sitter-app-server.vercel.app/petSitterUser/${petSitterID}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,

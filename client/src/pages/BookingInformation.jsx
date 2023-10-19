@@ -38,7 +38,7 @@ const BookingInformation = () => {
     try {
       const token = localStorage.getItem("token");
       const result = await axios.get(
-        `http://localhost:6543/petOwnerUser/${petOwnerID}`,
+        `https://pet-sitter-app-server.vercel.app/petOwnerUser/${petOwnerID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

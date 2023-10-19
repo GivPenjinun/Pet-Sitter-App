@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Frame_427321178 from "../assets/images/elements/Frame_427321178.svg";
 import Frame_427320934 from "../assets/images/elements/Frame_427320934.svg";
 import Facebook_logo from "../assets/images/elements/Facebook_logo.svg";
@@ -6,6 +7,7 @@ import google_logo from "../assets/images/elements/google_logo.svg";
 import { useAuth } from "../context/authentication";
 
 function LoginPage() {
+  const navigate = useNavigate();
   const [role, setRole] = useState("");
   const { loginPetowner, loginPetsitter, logout } = useAuth();
   const [formData, setFormData] = useState({
@@ -141,12 +143,14 @@ function LoginPage() {
           <div className="mt-6">
             <p className="text-center text-sm text-gray-600">
               Didn't have an account?{" "}
-              <a
-                href="/register"
+              <button
+                onClick={() => {
+                  navigate("/register");
+                }}
                 className="font-medium text-orange-600 hover:text-orange-500"
               >
                 Register
-              </a>
+              </button>
             </p>
           </div>
         </div>

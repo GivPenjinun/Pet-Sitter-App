@@ -198,7 +198,7 @@ function PetSitterDetail() {
     petSitter.petsitterdetail.length === 0
   ) {
     // Handle the case when petSitter data is not available or empty
-    return <div>No data available for this pet sitter.</div>;
+    return <div>Server is busy right now.</div>;
   }
   const petSitterDetail = petSitter.petsitterdetail[0];
 
@@ -206,7 +206,6 @@ function PetSitterDetail() {
     setSelectedPetsitterID(petSitterDetail.petsitter_id);
     setSelectedPetsitterName(petSitterDetail.pet_sitter_name);
     setSelectedPetsitterUser(petSitter.username);
-    console.log(selectedPetsitterID);
   };
 
   return (

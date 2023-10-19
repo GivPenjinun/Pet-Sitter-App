@@ -45,8 +45,6 @@ function PetSitterList() {
   };
 
   useEffect(() => {
-    console.log(petType);
-    console.log(petSitterLists);
     getFilter(["dog", "cat", "rabbit", "bird"]);
     getPetSitterLists({ petType, keywords, experience, page });
   }, [isSearch]);
@@ -59,14 +57,11 @@ function PetSitterList() {
     }
     let tempPetType = selectedAnimals.join(" ");
     setPetType(tempPetType);
-    console.log(petType);
+
     if (petType.charAt(0) === " ") {
       let tempData = petType.slice(1);
       setPetType(tempData);
     }
-    console.log(keywords);
-    console.log(petType);
-    console.log(experience);
   };
 
   const handlePetType = (value, id) => {

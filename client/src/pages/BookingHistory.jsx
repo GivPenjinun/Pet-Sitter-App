@@ -20,12 +20,10 @@ function BookingHistory() {
   const handleToggleBookingModal = (id) => {
     setBookingID(id);
     setToggleViewBooking(true);
-    console.log(bookingID);
   };
 
   useEffect(() => {
     getBooking();
-    console.log(bookingHistory);
   }, []);
 
   return (

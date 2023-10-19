@@ -7,11 +7,10 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export default function DatePickerValue() {
   const [value, setValue] = React.useState(dayjs(""));
-const futureDate = new Date(today);
+  const futureDate = new Date(today);
   futureDate.setDate(today.getDate() + 7);
   const handleDateChange = (newValue) => {
     setValue(newValue); // อัปเดต state โดยใช้ค่าใหม่ที่เลือก
-    console.log(handleDateChange);
   };
 
   return (

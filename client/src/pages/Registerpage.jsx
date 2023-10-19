@@ -188,7 +188,7 @@ function RegistrationForm() {
                     value="petowner"
                     onClick={(e) => {
                       setRole(e.target.value);
-                      console.log(role);
+                      //console.log(role);
                     }}
                     className="form-checkbox h-4 w-4 accent-orange-600"
                   />
@@ -201,7 +201,7 @@ function RegistrationForm() {
                     value="petsitter"
                     onClick={(e) => {
                       setRole(e.target.value);
-                      console.log(role);
+                      //console.log(role);
                     }}
                     className="form-checkbox h-4 w-4 accent-orange-600"
                   />

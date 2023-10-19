@@ -130,8 +130,6 @@ const fetchUserData = () => {
 
   const getPetByID = async () => {
     try {
-      console.log(petOwnerID);
-      console.log(petID);
       const token = localStorage.getItem("token");
       setIsError(false);
 
@@ -188,12 +186,11 @@ const fetchUserData = () => {
           },
         }
       );
-      console.log(petID);
+
       const newPetLists = allpets.filter((pet) => {
         return pet.pet_id !== petID;
       });
-      console.log(allpets);
-      console.log(newPetLists);
+
       setAllpets(newPetLists);
       setIsAllPetChange(!isAllPetChange);
       setIsLoading(false);
@@ -218,7 +215,6 @@ const fetchUserData = () => {
 
       setIsLoading(false);
       setBookingHistory(result.data.bookings);
-      console.log(result.data.bookings);
     } catch (error) {
       setIsError(true);
       setIsLoading(false);
@@ -239,9 +235,8 @@ const fetchUserData = () => {
           },
         }
       );
-      console.log(result);
+
       setBooking(result.data.booking);
-      console.log(result.data.booking);
     } catch (error) {
       setIsError(true);
       setIsLoading(false);
@@ -306,7 +301,6 @@ const fetchUserData = () => {
       );
 
       setBookingList(result.data.bookings);
-      console.log(result.data);
     } catch (error) {
       // Handle authentication error here
       console.error("Authentication error:", error);

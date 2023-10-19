@@ -36,7 +36,7 @@ const PetCareSlogan = () => {
       // If not selected, add it to the array
       setSelectedAnimals([...selectedAnimals, value]);
     }
-    console.log(selectedAnimals);
+    //console.log(selectedAnimals);
   };
 
   const handleChangeExperience = (event) => {
@@ -46,7 +46,7 @@ const PetCareSlogan = () => {
   const handleSearch = () => {
     let tempPetType = selectedAnimals.join(" ");
     setPetType(tempPetType);
-    console.log(petType);
+
     navigate("/petsitterlist");
   };
 

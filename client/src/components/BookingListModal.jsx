@@ -16,13 +16,10 @@ export default function BookingListModal() {
 
   const handleClosePetModal = () => {
     setOpenPetModal(false);
-    console.log(OpenPetModal);
   };
 
   useEffect(() => {
     getPetByID();
-    //console.log(bookingID);
-    // console.log(booking);
   }, [petID]);
 
   return (

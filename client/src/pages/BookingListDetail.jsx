@@ -96,7 +96,7 @@ function BookingListDetail() {
     const newArray = bookingList.filter((booking) => {
       return booking.booking_id == bookingID;
     });
-    console.log(newArray[0]);
+    //console.log(newArray[0]);
     setBooking(newArray[0]);
   };
 

@@ -121,7 +121,7 @@ const BookingPayment = () => {
           totalPrice: prices,
         };
         submitBooking(data);
-        console.log(data);
+
         navigate(`/booking/bill`);
       }
     } else {
@@ -135,7 +135,7 @@ const BookingPayment = () => {
         totalPrice: prices,
       };
       submitBooking(data);
-      console.log(data);
+      //console.log(data);
       navigate(`/booking/bill`);
     }
   };

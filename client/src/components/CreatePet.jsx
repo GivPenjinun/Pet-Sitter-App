@@ -40,14 +40,14 @@ function CreatePet() {
     formData.append("weight", weight);
     formData.append("about", about);
     formData.append("avatar", avatars);
-
+    /*
     formData.forEach((value, key) => {
       console.log(`Field: ${key}, Value: ${value}`);
     });
 
     console.log(avatars);
     console.log(formData);
-
+*/
     createPet(formData);
     handleToggleCreatePet();
   };

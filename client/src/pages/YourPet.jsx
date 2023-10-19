@@ -39,7 +39,7 @@ function YourPet() {
   const handleToggleViewPet = (id) => {
     setPetID(id);
     setToggleViewPet(true);
-    console.log(petID);
+    //console.log(petID);
   };
 
   useEffect(() => {

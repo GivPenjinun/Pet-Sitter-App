@@ -43,7 +43,6 @@ const BillBooking = () => {
   }/${current.getFullYear()}`;
 
   const [billData, setBillData] = useState({});
-  console.log(billData);
 
   const fetchBooking = async () => {
     const res = await axios.get(

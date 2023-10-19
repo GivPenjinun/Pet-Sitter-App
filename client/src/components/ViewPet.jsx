@@ -71,14 +71,14 @@ function ViewPet() {
     formData.append("about", about);
 
     formData.append("avatar", avatars);
-
+    /*
     formData.forEach((value, key) => {
       console.log(`Field: ${key}, Value: ${value}`);
     });
 
     console.log(avatars);
     console.log(formData);
-
+*/
     updatePet(formData);
 
     setIsAlert(true);
@@ -89,7 +89,6 @@ function ViewPet() {
 
     setAvatars(file);
     setPhoto(URL.createObjectURL(file));
-    console.log(avatars);
   };
 
   setTimeout(() => {

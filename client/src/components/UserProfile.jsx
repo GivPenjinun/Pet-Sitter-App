@@ -34,7 +34,6 @@ function UserProfile() {
 
   useEffect(() => {
     getPetOwnerProfile();
-    // console.log(petOwnerProfile);
   }, []);
 
   function formatDate(isoDate) {
@@ -115,10 +114,8 @@ function UserProfile() {
   };
 
   const handleValueChange = (newValue) => {
-    console.log(newValue);
     setValue(newValue);
     setDateOfBirth(value.startDate);
-    console.log(dateOfBirth);
   };
 
   const handleSubmit = (e) => {
@@ -134,7 +131,7 @@ function UserProfile() {
       formData.append("id_card_number", idNumber);
       formData.append("date_of_birth", newDate);
       formData.append("avatar", avatars);
-      console.log(newDate);
+      //console.log(newDate);
 
       updatePetOwnerProfile(formData);
 
@@ -147,7 +144,6 @@ function UserProfile() {
 
     setAvatars(file);
     setPhoto(URL.createObjectURL(file));
-    console.log(avatars);
   };
 
   setTimeout(() => {

@@ -51,7 +51,6 @@ const BookingYourPet = (props) => {
       setSelectedPets(selectedPets.filter((pet) => pet !== petId));
       setSelectedPetsName((prevPets) => prevPets.filter((p) => p !== petName));
     }
-    console.log(selectedPets);
   };
 
   const handleToggleViewPet = (e, id) => {

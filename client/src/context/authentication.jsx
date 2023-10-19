@@ -13,19 +13,25 @@ function AuthProvider(props) {
   });
 
   const registerPetowner = async (data) => {
-    await axios.post("http://localhost:6543/petOwnerUser/register", data);
+    await axios.post(
+      "https://pet-sitter-app-server.vercel.app/petOwnerUser/register",
+      data
+    );
     navigate("/login");
   };
 
   const registerPetsitter = async (data) => {
-    await axios.post("http://localhost:6543/petSitterUser/register", data);
+    await axios.post(
+      "https://pet-sitter-app-server.vercel.app/petSitterUser/register",
+      data
+    );
     navigate("/login");
   };
 
   const loginPetowner = async (data) => {
     try {
       const result = await axios.post(
-        "http://localhost:6543/petOwnerUser/login",
+        "https://pet-sitter-app-server.vercel.app/petOwnerUser/login",
         data
       );
       const token = result.data.token;
@@ -45,7 +51,7 @@ function AuthProvider(props) {
   const loginPetsitter = async (data) => {
     try {
       const result = await axios.post(
-        "http://localhost:6543/petSitterUser/login",
+        "https://pet-sitter-app-server.vercel.app/petSitterUser/login",
         data
       );
       const token = result.data.token;

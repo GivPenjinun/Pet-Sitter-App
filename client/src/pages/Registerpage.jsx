@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Frame_427321178 from "../assets/images/elements/Frame_427321178.svg";
 import Frame_427320934 from "../assets/images/elements/Frame_427320934.svg";
 import { useAuth } from "../context/authentication";
+import { useNavigate } from "react-router-dom";
 
 function RegistrationForm() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -221,12 +223,14 @@ function RegistrationForm() {
           <div className="mt-6">
             <p className="text-center text-sm text-gray-600">
               Already have an account?{" "}
-              <a
-                href="/login"
+              <button
+                onClick={() => {
+                  navigate("/login");
+                }}
                 className="font-medium text-orange-600 hover:text-orange-100"
               >
                 Login
-              </a>
+              </button>
             </p>
           </div>
         </div>

@@ -1,9 +1,8 @@
-Pet sitter application were developed for pet lovers to find suitable pet sitter for their lovely pets.
+Pet sitter applications were developed for pet lovers to find suitable pet sitters for their lovely pets.
 
-Tool: React, MUI, Tailwind, Supabase, Prisma, Node js, Express, Postgres
+Tool: React, MUI, Tailwind, Supabase, Prisma, Node.js, Express, Postgres
 
-This is final project from boot camp.
-For working as team by using Agile and Scrum method, studying and testing our skills.
+This is the final project from boot camp for working as a team by using the Agile and Scrum methods, studying, and testing our skills
 
-Visit our project => https://pet-sitter-app-client.vercel.app/
+Visit our project => https://pet-sitter-app-client.vercel.app/ |
 please, register before using our app. 

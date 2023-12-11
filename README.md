@@ -11,3 +11,34 @@ This is the final project from bootcamp for working as a team by using the Agile
 
 Visit our project => https://pet-sitter-app-client.vercel.app/ |
 please, register before using our app. 
+
+---
+# Pet Sitter App (Pet care)
+
+A pet sitting web app connects pet owners with pet sitters, making it easy to find trusted caregivers for pets. It features user profiles, pet details, booking options, reviews, and secure payments. Convenient and reliable pet care at your fingertips!
+
+## **System Requirements**
+
+**User Management:**
+
+- Allow users to register an account.
+- Enable users to log in and log out.
+
+**Pet Owner Features:**
+
+- Create a dashboard for pet owners to manage their pets and bookings.
+- Allow pet owners to add/edit/delete their pets' profiles (name, breed, age, etc.).
+- Enable pet owners to search for pet sitters based on location and availability.
+- Implement a booking system that allows pet owners to schedule appointments with pet sitters.
+
+
+**Pet Sitter Features:** 
+
+- Create a dashboard for pet sitters to manage their schedules and bookings.
+- Allow pet sitters to set their availability and update it as needed.
+- Enable pet sitters to accept or decline booking requests.
+
+**Search and Filter Options:**
+
+- Add filters to search for pet sitters based on specific criteria (e.g., pet type, experience, ratings)
+
